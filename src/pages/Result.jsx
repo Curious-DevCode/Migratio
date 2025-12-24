@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import countries from "../data/countries";
+import countries from "../data/countries.js";
 import { rankCountries } from "../logic/decisionLogic";
 
 export default function ResultPage() {
