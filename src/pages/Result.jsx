@@ -20,7 +20,6 @@ export default function ResultPage() {
     age,
     gender,
     fieldOfStudy,
-    studentGoal,
     familyMembers,
     bachelorSkill,
   } = state;
@@ -59,11 +58,8 @@ export default function ResultPage() {
             onClick={() => setActiveCountry(country)}
             className="cursor-pointer p-6 rounded-2xl shadow-xl bg-white text-gray-900 hover:scale-105 transition"
           >
-            <div className="flex justify-between items-center mb-2">
+            <div className="mb-2">
               <h2 className="text-2xl font-bold">{country.name}</h2>
-              <span className="text-sm px-3 py-1 bg-green-100 text-green-800 rounded-full">
-                Score: {country.score}
-              </span>
             </div>
 
             <p className="text-sm text-gray-700 mb-2">
@@ -103,12 +99,12 @@ export default function ResultPage() {
           </p>
 
           <p className="text-gray-600 mb-6">
-            This recommendation is generated based on your profile —
-            age ({age}), gender ({gender}),
+            This recommendation is generated based on your profile — age ({age}),
+            gender ({gender}),
             {category === "student" && ` academic background in ${fieldOfStudy}`}
             {category === "bachelor" && ` skillset in ${bachelorSkill}`}
-            {category === "family" && ` family size of ${familyMembers}`} —
-            and comparative migration scoring logic.
+            {category === "family" && ` family size of ${familyMembers}`} — and
+            comparative migration scoring logic.
           </p>
 
           <button
